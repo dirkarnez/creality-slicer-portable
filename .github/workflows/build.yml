@@ -23,9 +23,9 @@ jobs:
         run: |
           curl https://file2-cdn.creality.com/file/cbf0359e500409d3320b370dc8602813/Creality_Slicer-4.8.2-build-291-win64.exe -L --output installer.exe &&^
           7z x installer.exe -o"installation" -y &&^
+          cd installation &&^
           rmdir /q /s "arduino" &&^
           rmdir /q /s "$PLUGINSDIR" &&^
-          cd installation &&^
           dir
           
       - shell: cmd
